@@ -1,14 +1,11 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { login } from '../../redux/auth/auth-operations';
-import { useLocation, useNavigate } from 'react-router-dom';
-
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
+import { useNavigate } from 'react-router-dom';
 
 const LoginForm = ({ toPage }) => {
   const navigate = useNavigate();
-  // const location = useLocation();
+
   const dispatch = useDispatch();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -40,8 +37,6 @@ const LoginForm = ({ toPage }) => {
       .then(clearForm)
       .then(toNaigate)
       .catch('ERROR');
-    // clearForm();
-    // toNaigate();
   };
 
   return (

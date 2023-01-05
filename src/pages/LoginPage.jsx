@@ -1,5 +1,5 @@
 import { lazy } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 const LoginForm = lazy(() =>
   import('../components/LoginForm/LoginForm')
